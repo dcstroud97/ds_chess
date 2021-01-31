@@ -1,12 +1,34 @@
-.chess_board{
-    display: inline-grid;
-    grid-template-rows: repeat(8, 150px);
-    grid-template-columns: repeat(8, 150px);
-    grid-gap: 0px;
+#alg_not{
+    width: 85vh;
+    height: 85vh;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -42.5vh;
+    margin-left: -42.5vh;
     border: 3px solid green;
 }
 
-.piece{
-    width: 7vh;
-    
+#chess_board{
+    width: 75vh;
+    height: 75vh;
+    position: fixed;
+    display: grid;
+    grid-template-columns: repeat(8, auto);
+    grid-template-rows: repeat(8, auto);
+    grid-gap: 5px;
+    top: 50%;
+    left: 50%;
+    margin-top: -37.5vh;
+    margin-left: -37.5vh;
+    border: 3px solid green;
 }
+
+#chess_board > .white_sq{
+    background-color: grey;
+}
+
+#chess_board > .green_sq{
+    background-color: green;
+}
+
