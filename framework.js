@@ -1,11 +1,33 @@
-function cloneSquares(amount, colorSquare){
-    for(var i = 0; i < amount; i++){
+function insertSquares(){
+    //the refNode inserts the elements into the chess_board class
+    var refNode = document.getElementById("chess_board");
+    //the flag sets a reference point for what color squares go where
+    var flag = 0;
+    for(var i = 0; i < 64; i++){
         var new_square = document.createElement("div");
-        new_square.className = "green_sq";
-        console.log("square " + i + " has been made");
+        if(flag <= 7){
+            if(i % 2 == 0){
+                new_square.className = "white_sq";
+            }
+            else{
+                new_square.className = "green_sq";
+            }
+            flag++
+        }
+        else{
+            if(i % 2 == 0){
+                new_square.className = "green_sq";
+            }
+            else{
+                new_square.className = "white_sq";
+            }
+            flag++
+            if(flag == 16){
+                flag = 0;
+            }
+        }
+        refNode.appendChild(new_square);
     }
 }
 
-var amount = 32;
-var colorSquare = ""
-cloneSquares(amount, );
+insertSquares();
