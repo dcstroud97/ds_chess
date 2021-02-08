@@ -10,7 +10,7 @@
     border: 3px solid darkgreen;
 }
 
-#not_let{
+#not_let_top{
     width: 75vh;
     height: 5vh;
     position: fixed;
@@ -18,13 +18,27 @@
     grid-template-columns: repeat(8, auto);
     top: 50%;
     left: 50%;
-    margin-top: -42.5vh;
+    margin-top: -42vh;
     margin-left: -37.25vh;
     text-align: center;
     line-height: 3
 }
 
-#not_num{
+#not_let_bot{
+    width: 75vh;
+    height: 5vh;
+    position: fixed;
+    display: grid;
+    grid-template-columns: repeat(8, auto);
+    top: 50%;
+    left: 50%;
+    margin-top: 38.25vh;
+    margin-left: -37.25vh;
+    text-align: center;
+    line-height: 3
+}
+
+#not_num_left{
     width: 5vh;
     height: 75vh;
     position: fixed;
@@ -32,8 +46,22 @@
     grid-template-rows: repeat(8, auto);
     top: 50%;
     left: 50%;
-    margin-top: -37.25vh;
+    margin-top: -36vh;
     margin-left: -42.5vh;
+    text-align: center;
+    line-height: 5
+}
+
+#not_num_right{
+    width: 5vh;
+    height: 75vh;
+    position: fixed;
+    display: grid;
+    grid-template-rows: repeat(8, auto);
+    top: 50%;
+    left: 50%;
+    margin-top: -36vh;
+    margin-left: 37.25vh;
     text-align: center;
     line-height: 5
 }
@@ -41,7 +69,7 @@
 #chess_board{
     width: 75vh;
     height: 75vh;
-    position: fixed;
+    position: relative;
     display: grid;
     grid-template-columns: repeat(8, auto);
     grid-template-rows: repeat(8, auto);
@@ -50,6 +78,11 @@
     margin-top: -37.5vh;
     margin-left: -37.5vh;
     border: 3px solid darkgreen;
+}
+
+.pieces{
+    position: fixed;
+    height: 9vh;
 }
 
 #chess_board > .white_sq{
